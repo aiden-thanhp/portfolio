@@ -8,6 +8,7 @@ export default function Home() {
             <Header 
                 backgroundImg={backgroundImg} 
                 headline="Full-stack Developer"
+                buttonName="MY RESUME"
             />
         </div>
     )
