@@ -7,6 +7,7 @@ import headerClock from "../../assets/header-clock.png";
 import { Box } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 import StyledButton from "../StyledButton/StyledButton.component";
+import theme from "../Theme/theme.component"
 
 const useMove = () => {
     const [state, setState] = React.useState({ x: 0, y: 0 });
@@ -151,18 +152,7 @@ export default function Header({ backgroundImg, headline, buttonName }) {
                     sx={{
                         mt: 1.5,
                         fontSize: 16,
-                        fontFamily: [
-                            '-apple-system',
-                            'BlinkMacSystemFont',
-                            '"Segoe UI"',
-                            'Roboto',
-                            '"Helvetica Neue"',
-                            'Arial',
-                            'sans-serif',
-                            '"Apple Color Emoji"',
-                            '"Segoe UI Emoji"',
-                            '"Segoe UI Symbol"',
-                        ].join(','),
+                        fontFamily: theme.fontFamily.join(','),
                         letterSpacing: 4,
                         py: 1.2,
                         px: 3
