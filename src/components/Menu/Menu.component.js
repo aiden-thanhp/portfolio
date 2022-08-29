@@ -24,7 +24,7 @@ import { useNavigate } from "react-router-dom";
 import theme from "../Theme/theme.component"
 
 export default function Menu(props) {
-    const pages = ["Home", "Resume", "Portfolio", "About"]
+    const pages = ["Home", "About", "Portfolio", "Resume"]
 
     const [scrollPosition, setScrollPosition] = React.useState(0);
     const [state, setState] = React.useState(false);

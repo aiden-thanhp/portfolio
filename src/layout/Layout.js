@@ -1,13 +1,20 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
 import Menu from "../components/Menu/Menu.component";
-import WebRoutes from "./WebRoutes";
+import Header from "../components/Header/Header.component";
+import backgroundImg from "../assets/home-background.png"
+import About from "../components/About/About.component";
 
 export default function Layout() {
     return (
         <div>
             <Menu />
-            <WebRoutes />
+            <Header 
+                backgroundImg={backgroundImg} 
+                headline="Full-stack Developer"
+                buttonName="MY RESUME"
+            />
+            <About />
             <Container>
                 <Box sx={{ my: 2 }}>
                 {[...new Array(12)]
