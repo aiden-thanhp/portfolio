@@ -4,6 +4,7 @@ import Menu from "../components/Menu/Menu.component";
 import Header from "../components/Header/Header.component";
 import backgroundImg from "../assets/home-background.png"
 import About from "../components/About/About.component";
+import Portfolio from "../components/Portfolio/Portfolio.component";
 
 export default function Layout() {
     return (
@@ -15,6 +16,7 @@ export default function Layout() {
                 buttonName="MY RESUME"
             />
             <About />
+            <Portfolio />
             <Container>
                 <Box sx={{ my: 2 }}>
                 {[...new Array(12)]
