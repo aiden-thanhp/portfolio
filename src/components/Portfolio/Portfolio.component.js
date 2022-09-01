@@ -66,7 +66,19 @@ export default function Portfolio() {
                     description="This is a project that allows users to create accounts and posts and manage them through their logins."
                     githubLink="www.google.com"
                     siteLink="www.google.com"
-                    detail="detail this detail this"
+                    detail={
+                        <div>
+                            <Typography paragraph>
+                                Assembled the functionality for an application that allows users to create and manage their accounts, log in and log out, and create and manage posts. 
+                            </Typography>
+                            <Typography paragraph>
+                                Developed frontend and backend systems that implement the functions using React, Express, and Node.JS for building the core system and make HTTP requests for all the accounts and posts creation and editing, and Bcrypt, JSON Web Tokens, and Universal Cookies to create and manage passwords and login tokens.
+                            </Typography>
+                            <Typography paragraph>
+                                Utilized Material UI as a framework to create the frontend side with file management that minimizes duplicate components.
+                            </Typography>
+                        </div>
+                    }
                 />
             </Grid>
             <Grid item xs={12} md={6} lg={4} sx={{ mt: 4, display: "flex", justifyContent: "center", alignItems: "center" }} >
@@ -76,10 +88,22 @@ export default function Portfolio() {
                     subheader="Business reservation management"
                     imageLink={RestaurantPic}
                     imgAlt="Restaurant Reservation System"
-                    description="This is a project that "
+                    description="A reservation management system for a restaurant for users to create, edit, and manage bookings."
                     githubLink="www.google.com"
                     siteLink="www.google.com"
-                    detail="detail this detail this"
+                    detail={
+                        <div>
+                            <Typography paragraph>
+                                Created a full-stack web application to create and manage reservation and table systems for a restaurant. 
+                            </Typography>
+                            <Typography paragraph>
+                                Implemented React router for frontends and Node.JS and Express for the backend to manage HTTP requests for all the reservation data stored in the PostgreSQL database. 
+                            </Typography>
+                            <Typography paragraph>
+                                Used Git to track progress and versions and Dotenv to keep sensitive information from being pushed to repositories. 
+                            </Typography>
+                        </div>
+                    }
                 />
             </Grid>
             <Grid item xs={12} md={6} lg={4} sx={{ mt: 4, display: "flex", justifyContent: "center", alignItems: "center" }} >
@@ -89,10 +113,28 @@ export default function Portfolio() {
                     subheader="Database Management"
                     imageLink={WeLoveMoviePic}
                     imgAlt="We Love Movies"
-                    description="description for this is title"
+                    description="A backend application that manage the movies, reviews, and theaters."
                     githubLink="https://github.com/aiden-thanhp/WeLoveMovies"
                     siteLink="https://starter-movie-front-end-puce.vercel.app/"
-                    detail="detail this detail this"
+                    detail={
+                        <div>
+                            <Typography paragraph>
+                                Created an application for users to gain access to data about movies, theaters, and reviews. 
+                            </Typography>
+                            <Typography paragraph>
+                                Developed a backend to store data and built specific routes that worked with the frontend from another developer to implement the functions.
+                            </Typography>
+                            <Typography paragraph>
+                                Used CRUD methods for reviews, and to view theaters and movies that are showing.
+                            </Typography>
+                            <Typography paragraph>
+                                Applied middleware packages, routes, and query parameters to manage users’ specific requests. 
+                            </Typography>
+                            <Typography paragraph>
+                                Used Knex migrations and seedings to create and manage the database stored with PostgreSQL.
+                            </Typography>
+                        </div>
+                    }
                 />
             </Grid>
         </Grid>
