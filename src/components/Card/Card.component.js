@@ -44,7 +44,9 @@ export default function PortfolioCard(
     }
 
     return (
-        <Card sx={{ width: "100%" }} >
+        <Card sx={{ 
+            width: "80%"
+        }} >
             <CardHeader 
                 avatar={
                     <Avatar
