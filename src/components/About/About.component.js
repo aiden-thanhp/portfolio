@@ -19,7 +19,8 @@ export default function About() {
             sx={{
                 display: "flex",
                 flexDirection: { xs: "column", md: "row" },
-                position: "relative"
+                position: "relative",
+                backgroundColor: "#fff"
             }}
         >
             <Box

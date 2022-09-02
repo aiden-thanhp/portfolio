@@ -49,12 +49,12 @@ export default function Header({ backgroundImg, headline, buttonName }) {
             <Box 
                 style={headerStyle}
                 sx={{
-                    opacity: 0.9,
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    position: "relative"
+                    position: "relative",
+                    zIndex: -4,
                 }}
             >
                 <Box
