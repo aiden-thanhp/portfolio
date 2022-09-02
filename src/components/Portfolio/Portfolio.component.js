@@ -64,8 +64,8 @@ export default function Portfolio() {
                     imageLink={SocialSitePic}
                     imgAlt="Social Site"
                     description="This is a project that allows users to create accounts and posts and manage them through their logins."
-                    githubLink="www.google.com"
-                    siteLink="www.google.com"
+                    githubLink="https://github.com/aiden-thanhp/social-frontend"
+                    siteLink="https://social-frontend-six.vercel.app/"
                     detail={
                         <div>
                             <Typography paragraph>
@@ -89,8 +89,8 @@ export default function Portfolio() {
                     imageLink={RestaurantPic}
                     imgAlt="Restaurant Reservation System"
                     description="A reservation management system for a restaurant for users to create, edit, and manage bookings."
-                    githubLink="www.google.com"
-                    siteLink="www.google.com"
+                    githubLink="https://github.com/aiden-thanhp/starter-restaurant-reservation"
+                    siteLink="https://restaurant-reservation-rust.vercel.app/dashboard"
                     detail={
                         <div>
                             <Typography paragraph>
