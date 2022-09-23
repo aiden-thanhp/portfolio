@@ -1,40 +1,14 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Menu from "../components/Menu/Menu.component";
-import Header from "../components/Header/Header.component";
-import backgroundImg from "../assets/home-background.png"
-import About from "../components/About/About.component";
-import Portfolio from "../components/Portfolio/Portfolio.component";
-import Footer from "../components/Footer/Footer.component";
+import NavBar from "../components/NavBar/NavBar.components";
 
 export default function Layout() {
     return (
-        <Box>
-            <Box
-                sx={{
-                    position: "relative",
-                    zIndex: 1,
-                }}
-            >
-                <Menu />
-                <Header 
-                    backgroundImg={backgroundImg} 
-                    headline="Full-stack Developer"
-                    buttonName="MY RESUME"
-                />
-                <About />
-                <Portfolio />
-            </Box>
-            <Box
-                sx={{
-                    position: "sticky",
-                    bottom: 0,
-                    left: 0,
-                    placeItems: "center"
-                }}
-            >
-                <Footer />
-            </Box>
+        <Box
+            sx={{ backgroundColor: "#e6e9e9" }}
+        >
+            <NavBar />
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </Box>
     )
 }
