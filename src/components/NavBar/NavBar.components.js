@@ -72,8 +72,10 @@ export default function NavBar() {
                 padding: "20px",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
+                width: "100vw"
             }}
+            position="fixed"
         >
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <Avatar alt="Aiden Phan" src={ProfilePicture} />
