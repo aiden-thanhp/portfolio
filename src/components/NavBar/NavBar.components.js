@@ -32,7 +32,7 @@ export default function NavBar() {
         <Box 
             onClick={handleDrawerToggle}
             onKeyDown={handleDrawerToggle} 
-            sx={{ width: 'auto' }}
+            sx={{ width: 'auto', position: "relative" }}
             role="presentation"
         >
             {navigationBar.map((navLink) => {

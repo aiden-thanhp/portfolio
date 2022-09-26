@@ -4,9 +4,14 @@ import {
     Typography 
 } from "@mui/material";
 import React from "react";
-import "./AboutMe.css"
+import "./AboutMe.css";
+import "../../layout/Layout.css"
+import { useNavigate } from "react-router-dom";
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Material UI", "NodeJS", "ExpressJS", "RESTful APIs", "PostgreSQL", "Mocha", "Chai", "Node Package Manager", "Visual Studio Code", "Postman", "DBeaver", "Heroku", "Vercal", "Git", "GitHub", "Knex", "JSON Web Tokens", "Bcrypt", "Dotenv", "Universal Cookies"]
 
 export default function AboutMe() {
+    const navigate = useNavigate();
     return (
         <Box sx={{ paddingY: "50px" }}>
             <Box
@@ -76,9 +81,33 @@ export default function AboutMe() {
                             paddingBottom: "25px"   
                         }}
                     >
-                        When it comes to business, first impressions matter, and good website design is the key to capitalizing on them. An excellent site is not judged solely on its looks, but on its functionality and usability as well. My experience as a programmer allows me to come up with intelligent solutions to technical challenges, while at the same time designing sleek and visually appealing websites. Aside from having extensive knowledge of recognized technical standards, I am conversant with modern building practices.
+                        I'm a <a className="flip">Full-stack Software Developer</a> building the Front-end and Back-end of websites and web applications. I reside in Northen Virginia area, proficient in using JavaScript, React, HTML, CSS, API implementing, NodeJS, Express, PostgreSQL, and frameworks like Bootstrap and Material UI. Check out some of my work in the <a className="flip">Projects</a> section.
                     </Typography>
-                    <button className="contactButton">Contact</button>
+                    <Typography
+                        component="p"
+                        variant="p"
+                        sx={{
+                            fontFamily: "'Source Sans Pro', sans-serif",
+                            fontSize: "17px",
+                            width: { xs: "90vw", sm: "500px", md: "90%" },
+                            paddingBottom: "25px"   
+                        }}
+                    >
+                        I like to adapt to <a className="flip">new technologies</a> and learn <a className="flip">new things</a> in life. I didn't join the coding environment as early as other people, but I have worked twice as hard to learn in a shorter time. I am a self-learner who will continue to be better. You can connect with me through <a className="flip">LinkedIn</a>, also check out my <a className="flip">GitHub</a> for more projects.
+                    </Typography>
+                    <Typography
+                        component="p"
+                        variant="p"
+                        sx={{
+                            fontFamily: "'Source Sans Pro', sans-serif",
+                            fontSize: "17px",
+                            width: { xs: "90vw", sm: "500px", md: "90%" },
+                            paddingBottom: "25px"   
+                        }}
+                    >
+                        I'm open to <a className="flip">Job</a> opportunities where I can contribute, learn, and grow. If you read through this right here, I believe that I have applied for your job posting, thank you very much for spending your valuable time on my application, I would love to become part of your organization. If you have any questions, please feel free to <a className="flip">contact me</a> any time.
+                    </Typography>
+                    <button className="contactButton" onClick={() => navigate("/contact")}>Contact</button>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ width: { md: "80%" } }} >
                     <Typography
@@ -93,16 +122,13 @@ export default function AboutMe() {
                     >
                         My Skills
                     </Typography>
-                    <Typography
-                        component="p"
-                        variant="p"
-                        sx={{
-                            fontFamily: "'Source Sans Pro', sans-serif",
-                            fontSize: "17px"       
-                        }}
-                    >
-                        When it comes to business, first impressions matter, and good website design is the key to capitalizing on them. An excellent site is not judged solely on its looks, but on its functionality and usability as well. My experience as a programmer allows me to come up with intelligent solutions to technical challenges, while at the same time designing sleek and visually appealing websites. Aside from having extensive knowledge of recognized technical standards, I am conversant with modern building practices.
-                    </Typography>
+                    <Box>
+                        {skills.map((skill) => {
+                            return (
+                                <button key={skill} className="skillButton">{skill}</button>
+                            )
+                        })}
+                    </Box>
                 </Grid>
             </Grid>
         </Box>
