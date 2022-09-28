@@ -1,0 +1,27 @@
+.label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.input, .textArea {
+    margin-bottom: 25px;
+    width: 100%;
+    background-color: #f6f4f4;
+    border-style: none;
+    border: rgba(190, 190, 190, 0.41) solid 1px;
+    border-radius: 5px;
+    padding: 0px 15px 0px 15px;
+    font-weight: 900
+}
+
+.input {
+    height: 45px;
+}
+
+.textArea {
+    height: 200px;
+    font-family: inherit;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

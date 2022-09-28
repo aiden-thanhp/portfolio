@@ -3,11 +3,12 @@ import {
     Typography 
 } from "@mui/material";
 import React from "react";
-import "../AboutMe/AboutMe.css"
+import "../AboutMe/AboutMe.css";
+import "./Contact.css";
 
 export default function Contact() {
-    return (
-        <Box sx={{ paddingY: "50px" }}>
+    return ( 
+        <Box sx={{ paddingY: "50px", display: "flex", flexDirection: "column", alignItems: "center" }}>
             <Box
                 sx={{ 
                     display: "flex", 
@@ -49,10 +50,52 @@ export default function Contact() {
                         textAlign: "center",
                         paddingBottom: "50px"
                     }}
-                >Feel free to Contact me by filling out the form below to send me an email or check out my <a className="flip">Resume</a>.</Typography>
+                >Feel free to Contact me by filling out the form below or check out my <a className="flip">Resume</a>.</Typography>
+            </Box>
+            <Box
+                sx={{
+                    backgroundColor: "#fff",
+                    width: "80vw",
+                    maxWidth: "900px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    padding: "35px",
+                    borderRadius: "10px"
+                }}
+            >
+                <form id="contact" 
+                    method="POST" 
+                    action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSfOovf3s5rtztZ8OYxr23OC5rKYC0QNAqoQcjxItFKnpBfttA/formResponse" 
+                    target="_blank">
+                    <label className="label" htmlFor="name">Name:</label><br />
+                    <input 
+                        className="input" 
+                        type="text" 
+                        id="name" 
+                        name="entry.386668084" 
+                        placeholder="Enter your name"
+                        required
+                    /><br />
+                    <label className="label" htmlFor="email">Email:</label><br />
+                    <input 
+                        className="input" 
+                        type="text" 
+                        id="email" 
+                        name="entry.1803035999" 
+                        placeholder="Enter your email address"
+                        required
+                    /><br />
+                    <label className="label" htmlFor="message">Message:</label><br />
+                    <textarea 
+                        className="textArea" 
+                        type="textarea" 
+                        id="message" 
+                        name="entry.569755491" 
+                        placeholder="Enter your message"
+                        required
+                    /><br />
+                    <button type="submit" className="contactButton">Submit</button>
+                </form>
             </Box>
         </Box>
     )
 }
-
-//Next step: Create a contact form to send email only.

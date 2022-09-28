@@ -8,7 +8,7 @@ import "./AboutMe.css";
 import "../../layout/Layout.css"
 import { useNavigate } from "react-router-dom";
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Material UI", "NodeJS", "ExpressJS", "RESTful APIs", "PostgreSQL", "Mocha", "Chai", "Node Package Manager", "Visual Studio Code", "Postman", "DBeaver", "Heroku", "Vercal", "Git", "GitHub", "Knex", "JSON Web Tokens", "Bcrypt", "Dotenv", "Universal Cookies"]
+const skills = ["HTML", "CSS", "JavaScript", "Python", "React", "Bootstrap", "Material UI", "NodeJS", "ExpressJS", "RESTful APIs", "PostgreSQL", "Mocha", "Chai", "Node Package Manager", "Visual Studio Code", "Postman", "DBeaver", "Heroku", "Vercal", "Git", "GitHub", "Knex", "JSON Web Tokens", "Bcrypt", "Dotenv", "Universal Cookies"]
 
 export default function AboutMe() {
     const navigate = useNavigate();

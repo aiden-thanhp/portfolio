@@ -8,7 +8,8 @@
     margin: 0px 5px 0px 5px;
     padding: 7px 12px 7px 12px;
     border-style: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;       background-color: #e6e9e9;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;       
+    background-color: #e6e9e9;
     border-radius: 5px;
     letter-spacing: 1.12px
 }

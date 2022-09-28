@@ -47,7 +47,7 @@ export default function Intro() {
                     width: { xs: "90vw", md: "850px"},
                     lineHeight: 2
                 }}
-            >Frontend and backend developer, Javascript engineer, 
+            >Frontend and backend developer, Javascript and Python engineer, 
             <button
                 className="buttonHover"
             >Badminton</button>
