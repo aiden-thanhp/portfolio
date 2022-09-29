@@ -4,19 +4,19 @@ import {
     Divider, 
     Drawer, 
     IconButton, 
-    Link, 
     Typography
 } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ProfilePicture from "../../assets/profile-picture.JPG"
 import MenuIcon from '@mui/icons-material/Menu';
+import "../../layout/Layout.css"
 
 const navigationBar = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/" },
-    { name: "Projects", link: "/" },
-    { name: "Contact", link: "/" }
+    { name: "Home", link: "home" },
+    { name: "About", link: "about" },
+    { name: "Projects", link: "projects" },
+    { name: "Contact", link: "contact" }
 ];
 
 export default function NavBar() {
@@ -41,28 +41,34 @@ export default function NavBar() {
                 return (
                     <Box>
                         <Divider />
-                        <Link
-                            component="button"
-                            variant="h6"
-                            underline="hover"
-                            sx={{
-                                marginLeft: "10px",
-                                fontFamily: "'Source Sans Pro', sans-serif",
-                                fontWeight: 900,
-                                textTransform: "uppercase",
-                                fontSize: "15px",
-                                letterSpacing: 1.5,
-                                marginRight: "5px",
-                                color: "#000",
-                                height: "70px"
-                            }}
-                            onClick={() => navigate(link)}
-                        >{name}</Link>
+                        <Box sx={{ paddingY: "15px", paddingLeft: "15px" }}>
+                            <a
+                                className="navLink-mobile"
+                                onClick={() => handleNavClick(link)}
+                            >{name}</a>
+                        </Box>
                     </Box>
                 )
             })}
         </Box>
     )   
+
+    function handleScroll(id) {
+        const item = document.getElementById(id);
+        console.log(item)
+        window.scrollTo({
+            top: item.offsetTop - 80,
+            behavior: "smooth"
+        })
+    }
+
+    function handleNavClick(id) {
+        if (window.location.pathname !== "/") {
+            navigate("/");
+        } else {
+            handleScroll(id)
+        }
+    }
 
     return (
         <Box
@@ -99,22 +105,10 @@ export default function NavBar() {
                     const link = navLink.link;
                     const name = navLink.name;
                     return (
-                        <Link
-                            component="button"
-                            variant="h6"
-                            underline="hover"
-                            sx={{
-                                marginLeft: "10px",
-                                fontFamily: "'Source Sans Pro', sans-serif",
-                                fontWeight: 900,
-                                textTransform: "uppercase",
-                                fontSize: "15px",
-                                letterSpacing: 1.5,
-                                marginRight: "5px",
-                                color: "#000"
-                            }}
-                            onClick={() => navigate(link)}
-                        >{name}</Link>
+                        <a
+                            className="navLink"
+                            onClick={() => handleNavClick(link)}
+                        >{name}</a>
                     )
                 })}
             </Box>

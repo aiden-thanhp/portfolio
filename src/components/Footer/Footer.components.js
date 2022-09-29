@@ -8,14 +8,20 @@ import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+    const navigate = useNavigate();
+
     return (
         <Box
             sx={{
                 backgroundColor: "#000",
                 paddingY: "45px",
-                paddingX: "20px"
+                paddingX: "20px",
+                position: "sticky",
+                bottom: "0px",
+                zIndex: -3
             }}
         >
             <Grid container spacing={2}>
@@ -60,13 +66,19 @@ export default function Footer() {
                         }}
                     >Social</Typography>
                     <Box>
-                        <IconButton>
+                        <IconButton
+                            onClick={() => navigate("https://www.linkedin.com/in/aidenthanhp")}
+                        >
                             <LinkedInIcon sx={{ color: "#fff" }} />
                         </IconButton>
-                        <IconButton>
+                        <IconButton
+                            onClick={() => navigate("https://github.com/aiden-thanhp")}
+                        >
                             <GitHubIcon sx={{ color: "#fff" }} />
                         </IconButton>
-                        <IconButton>
+                        <IconButton
+                            onClick={() => window.open("mailto:aiden.thanhp@gmail.com")}
+                        >
                             <EmailIcon sx={{ color: "#fff" }} />
                         </IconButton>
                     </Box>

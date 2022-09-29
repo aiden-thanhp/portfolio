@@ -15,3 +15,23 @@
 .contactButton:hover, .contactButton:active {
     transform: translate(0, -10px);
 }
+
+.navLink {
+    padding: 0px 10px 0px 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 15px;
+    transition: color ease 0.5s;
+}
+
+.navLink-mobile {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 15px;
+    transition: color ease 0.5s;
+}
+
+.navLink:hover, .navLink:active,
+.navLink-mobile:hover, .navLink-mobile:active {
+    color: #07528f
+}

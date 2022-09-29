@@ -14,8 +14,18 @@ const styles = {
 };
 
 export default function Intro() {
+    function handleScroll(id) {
+        const item = document.getElementById(id);
+        console.log(item)
+        window.scrollTo({
+            top: item.offsetTop - 80,
+            behavior: "smooth"
+        })
+    }
+
     return (
         <Box
+            id="home"
             style={styles.introBackground}
             sx={{
                 paddingBottom: "100px",
@@ -74,18 +84,25 @@ export default function Intro() {
             >We have come from a world of pigeon post to a virtual reality. Let's make more magic happen in our real life together. View my
             <button
                 className="buttonHover"
+                onClick={() => handleScroll("projects")}
             >Projects</button>
             ,
             <button
                 className="buttonHover"
+
             >Resume</button>
             ,
             <button
                 className="buttonHover"
+                onClick={() => handleScroll("contact")}
             >Contact Me</button>
             , or send me an email at
             <button
                 className="buttonHover"
+                onClick={(e) => {
+                    window.open("mailto:aiden.thanhp@gmail.com");
+                    e.preventDefault();
+                }}
             >aiden.thanhp@gmail.com</button>
             .</Typography>
         </Box>

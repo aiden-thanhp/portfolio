@@ -12,8 +12,17 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "React", "Bootstrap", "Ma
 
 export default function AboutMe() {
     const navigate = useNavigate();
+    function handleScroll(id) {
+        const item = document.getElementById(id);
+        console.log(item)
+        window.scrollTo({
+            top: item.offsetTop - 80,
+            behavior: "smooth"
+        })
+    }
+
     return (
-        <Box sx={{ paddingY: "50px" }}>
+        <Box sx={{ paddingY: "50px" }} id="about" >
             <Box
                 sx={{ 
                     display: "flex", 
@@ -81,7 +90,7 @@ export default function AboutMe() {
                             paddingBottom: "25px"   
                         }}
                     >
-                        I'm a <a className="flip">Full-stack Software Developer</a> building the Front-end and Back-end of websites and web applications. I reside in Northen Virginia area, proficient in using JavaScript, React, HTML, CSS, API implementing, NodeJS, Express, PostgreSQL, and frameworks like Bootstrap and Material UI. Check out some of my work in the <a className="flip">Projects</a> section.
+                        I'm a <a className="flip" onClick={() => handleScroll("projects")}>Full-stack Software Developer</a> building the Front-end and Back-end of websites and web applications. I reside in Northen Virginia area, proficient in using JavaScript, React, HTML, CSS, API implementing, NodeJS, Express, PostgreSQL, and frameworks like Bootstrap and Material UI. Check out some of my work in the <a className="flip" onClick={() => handleScroll("projects")}>Projects</a> section.
                     </Typography>
                     <Typography
                         component="p"
@@ -93,7 +102,7 @@ export default function AboutMe() {
                             paddingBottom: "25px"   
                         }}
                     >
-                        I like to adapt to <a className="flip">new technologies</a> and learn <a className="flip">new things</a> in life. I didn't join the coding environment as early as other people, but I have worked twice as hard to learn in a shorter time. I am a self-learner who will continue to be better. You can connect with me through <a className="flip">LinkedIn</a>, also check out my <a className="flip">GitHub</a> for more projects.
+                        I like to adapt to <a className="flip">new technologies</a> and learn <a className="flip">new things</a> in life. I didn't join the coding environment as early as other people, but I have worked twice as hard to learn in a shorter time. I am a self-learner who will continue to be better. You can connect with me through <a className="flip" href="https://www.linkedin.com/in/aidenthanhp">LinkedIn</a>, also check out my <a className="flip" href="https://github.com/aiden-thanhp">GitHub</a> for more projects.
                     </Typography>
                     <Typography
                         component="p"
@@ -105,9 +114,9 @@ export default function AboutMe() {
                             paddingBottom: "25px"   
                         }}
                     >
-                        I'm open to <a className="flip">Job</a> opportunities where I can contribute, learn, and grow. If you read through this right here, I believe that I have applied for your job posting, thank you very much for spending your valuable time on my application, I would love to become part of your organization. If you have any questions, please feel free to <a className="flip">contact me</a> any time.
+                        I'm open to <a className="flip">Job</a> opportunities where I can contribute, learn, and grow. If you read through this right here, I believe that I have applied for your job posting, thank you very much for spending your valuable time on my application, I would love to become part of your organization. If you have any questions, please feel free to <a className="flip" onClick={() => handleScroll("contact")}>contact me</a> any time.
                     </Typography>
-                    <button className="contactButton" onClick={() => navigate("/contact")}>Contact</button>
+                    <button className="contactButton" onClick={() => handleScroll("contact")}>Contact</button>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ width: { md: "80%" } }} >
                     <Typography

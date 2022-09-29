@@ -7,19 +7,21 @@ import ProjectCard from "./ProjectCard.components";
 
 import GhostAppPic from "../../assets/project-ghost-app.png"
 
-const projects = [
+export const projects = [
     {
         name: "Ghost App",
         id: "1",
         image: GhostAppPic,
         link: "https://ghost-app-frontend.vercel.app/",
-        description: "Ghost App is a standalone discussion application where pre-added users can join and discuss about a specific topic."
+        description: "Ghost App is a standalone discussion application where pre-added users can join and discuss about a specific topic.",
+        overview: "I started this app when I saw the job application for Ghost company. This is more like a function for a bigger project such as social media, forum.",
+        tools: ["HTML", "CSS", "JavaScript", "React", "ExpressJS", "PostgreSQL", "Knex"]
     }
 ];
 
 export default function Projects() {
     return (
-        <Box sx={{ paddingY: "50px", backgroundColor: "#fbfbfb" }}>
+        <Box id="projects" sx={{ paddingY: "50px", backgroundColor: "#fbfbfb" }}>
             <Box
                 sx={{ 
                     display: "flex", 

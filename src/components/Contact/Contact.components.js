@@ -8,7 +8,7 @@ import "./Contact.css";
 
 export default function Contact() {
     return ( 
-        <Box sx={{ paddingY: "50px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Box id="contact" sx={{ backgroundColor: "#f6f4f4", paddingY: "50px", display: "flex", flexDirection: "column", alignItems: "center" }}>
             <Box
                 sx={{ 
                     display: "flex", 
