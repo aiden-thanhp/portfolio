@@ -7,7 +7,7 @@ import React from "react";
 import "./AboutMe.css";
 import "../../layout/Layout.css"
 import { useNavigate } from "react-router-dom";
-
+import { openResume } from "../Intro/Intro.components"
 const skills = ["HTML", "CSS", "JavaScript", "Python", "React", "Bootstrap", "Material UI", "NodeJS", "ExpressJS", "RESTful APIs", "PostgreSQL", "Mocha", "Chai", "Node Package Manager", "Visual Studio Code", "Postman", "DBeaver", "Heroku", "Vercal", "Git", "GitHub", "Knex", "JSON Web Tokens", "Bcrypt", "Dotenv", "Universal Cookies"]
 
 export default function AboutMe() {
@@ -114,7 +114,7 @@ export default function AboutMe() {
                             paddingBottom: "25px"   
                         }}
                     >
-                        I'm open to <a className="flip">Job</a> opportunities where I can contribute, learn, and grow. If you read through this right here, I believe that I have applied for your job posting, thank you very much for spending your valuable time on my application, I would love to become part of your organization. If you have any questions, please feel free to <a className="flip" onClick={() => handleScroll("contact")}>contact me</a> any time.
+                        I'm open to <a className="flip" onClick={(e) => openResume(e)}>Job</a> opportunities where I can contribute, learn, and grow. If you read through this right here, I believe that I have applied for your job posting, thank you very much for spending your valuable time on my application, I would love to become part of your organization. If you have any questions, please feel free to <a className="flip" onClick={() => handleScroll("contact")}>contact me</a> any time.
                     </Typography>
                     <button className="contactButton" onClick={() => handleScroll("contact")}>Contact</button>
                 </Grid>

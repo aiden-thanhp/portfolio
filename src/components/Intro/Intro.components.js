@@ -13,6 +13,11 @@ const styles = {
     }
 };
 
+export function openResume(e) {
+    e.preventDefault();
+    window.open("https://drive.google.com/file/d/1-yagfUnhiy5cy6E_82BHAABCbkgP1ked/view?usp=sharing");
+}
+
 export default function Intro() {
     function handleScroll(id) {
         const item = document.getElementById(id);
@@ -89,7 +94,7 @@ export default function Intro() {
             ,
             <button
                 className="buttonHover"
-
+                onClick={(e) => openResume(e)}
             >Resume</button>
             ,
             <button

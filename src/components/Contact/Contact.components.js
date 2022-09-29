@@ -5,6 +5,7 @@ import {
 import React from "react";
 import "../AboutMe/AboutMe.css";
 import "./Contact.css";
+import { openResume } from "../Intro/Intro.components";
 
 export default function Contact() {
     return ( 
@@ -50,7 +51,7 @@ export default function Contact() {
                         textAlign: "center",
                         paddingBottom: "50px"
                     }}
-                >Feel free to Contact me by filling out the form below or check out my <a className="flip">Resume</a>.</Typography>
+                >Feel free to Contact me by filling out the form below or check out my <a className="flip" onClick={(e) => openResume(e)}>Resume</a>.</Typography>
             </Box>
             <Box
                 sx={{
