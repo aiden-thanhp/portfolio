@@ -6,6 +6,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard.components";
 
 import GhostAppPic from "../../assets/project-ghost-app.png"
+import PeriodicTablesPic from "../../assets/project-periodic-tables.png"
 
 export const projects = [
     {
@@ -15,6 +16,15 @@ export const projects = [
         link: "https://ghost-app-frontend.vercel.app/",
         description: "Ghost App is a standalone discussion application where pre-added users can join and discuss about a specific topic.",
         overview: "I started this app when I saw the job application for Ghost company. This is more like a function for a bigger project such as social media, forum.",
+        tools: ["HTML", "CSS", "JavaScript", "React", "ExpressJS", "PostgreSQL", "Knex"]
+    },
+    {
+        name: "Periodic Tables",
+        id: "2",
+        image: PeriodicTablesPic,
+        link: "https://restaurant-reservation-rust.vercel.app/dashboard",
+        description: "Periodic Tables is a restaurant reservation management system for manager to take/edit reservations.",
+        overview: "This is a final capstone in my online course. The app will allow managers to see reservations for the selected date, and also the status of available tables in the restaurant. Managers can also search reservation with partial phone numbers and edit those reservations when customers call in. The system will not allow appointments in the past or outside business hours.",
         tools: ["HTML", "CSS", "JavaScript", "React", "ExpressJS", "PostgreSQL", "Knex"]
     }
 ];
