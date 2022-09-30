@@ -7,6 +7,7 @@ import ProjectCard from "./ProjectCard.components";
 
 import GhostAppPic from "../../assets/project-ghost-app.png"
 import PeriodicTablesPic from "../../assets/project-periodic-tables.png"
+import CalculatorPic from "../../assets/project-calculator.png"
 
 export const projects = [
     {
@@ -26,6 +27,15 @@ export const projects = [
         description: "Periodic Tables is a restaurant reservation management system for manager to take/edit reservations.",
         overview: "This is a final capstone in my online course. The app will allow managers to see reservations for the selected date, and also the status of available tables in the restaurant. Managers can also search reservation with partial phone numbers and edit those reservations when customers call in. The system will not allow appointments in the past or outside business hours.",
         tools: ["HTML", "CSS", "JavaScript", "React", "ExpressJS", "PostgreSQL", "Knex"]
+    },
+    {
+        name: "Basic Calculator",
+        id: "3",
+        image: CalculatorPic,
+        link: "https://calculator-two-pi.vercel.app/",
+        description: "Basic Calculator is my my outside of school project. I made the calculator to improve my Javascript skills with ReactJS.",
+        overview: "It is quite simple. You can do basic calculation with the calculator, including addition, substraction, multiplication, division, square root, square, etc.",
+        tools: ["HTML", "CSS", "JavaScript", "React"]
     }
 ];
 
